@@ -1,8 +1,18 @@
-import java.util.*;
+// import java.util.*;
 
 public class solution {
 
-    public int[] twoSum(int[] nums, int target) {
+    public static void main(String[] args) {
+
+        int[] nums = {1,2,3};
+        int target = 4;
+
+        int[] result = twoSum(nums, target);
+
+        System.out.println(result[0] + " " + result[1]);
+    }
+
+    public static int[] twoSum(int[] nums, int target) {
 
         Map<Integer,Integer> mpp = new HashMap<>();
 
@@ -18,6 +28,6 @@ public class solution {
             mpp.put(num, i);
         }
 
-        return new int[]{-1, -1};
+        return new int[]{-1,-1};
     }
 }
