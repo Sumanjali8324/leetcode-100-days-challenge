@@ -67,3 +67,52 @@ O(n)
 
 Java
 
+
+# Day 03 – Climbing Stairs
+
+## Problem
+
+You are climbing a staircase. It takes **n steps** to reach the top.
+
+Each time you can climb either **1 step** or **2 steps**.
+
+Find the number of **distinct ways** to reach the top.
+
+## Approach
+
+This problem follows a **Dynamic Programming / Fibonacci pattern**.
+
+To reach step `n`, we have two possibilities:
+
+1. Climb **1 step from (n-1)**
+2. Climb **2 steps from (n-2)**
+
+So the recurrence relation becomes:
+
+ways(n) = ways(n-1) + ways(n-2)
+
+We compute the number of ways iteratively using two variables.
+
+## Example
+
+Input: n = 3
+
+Ways to reach the top:
+
+1 → 1 → 1
+1 → 2
+2 → 1
+
+Output: 3
+
+## Time Complexity
+
+O(n)
+
+## Space Complexity
+
+O(1)
+
+## Language
+
+Java
