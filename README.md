@@ -116,3 +116,66 @@ O(1)
 ## Language
 
 Java
+
+# Day 04 – Maximum Subarray
+
+## Problem
+
+Given an integer array `nums`, find the **contiguous subarray** with the largest sum and return that sum.
+
+A **subarray** is a continuous part of an array.
+
+## Approach (Kadane's Algorithm)
+
+This problem can be solved efficiently using **Kadane’s Algorithm**.
+
+Idea:
+While traversing the array, keep track of the **current subarray sum**.
+If the current sum becomes negative, it is better to start a new subarray.
+
+Steps:
+
+1. Initialize two variables:
+
+   * `currentSum` → stores the current subarray sum
+   * `maxSum` → stores the maximum sum found so far
+2. Traverse the array.
+3. Add the current element to `currentSum`.
+4. Update `maxSum` with the maximum value.
+5. If `currentSum` becomes negative, reset it to `0`.
+
+## Example
+
+Input:
+
+```
+[-2,1,-3,4,-1,2,1,-5,4]
+```
+
+Maximum subarray:
+
+```
+[4, -1, 2, 1]
+```
+
+Output:
+
+```
+6
+```
+
+## Time Complexity
+
+O(n)
+
+## Space Complexity
+
+O(1)
+
+## Algorithm Used
+
+Kadane's Algorithm
+
+## Language
+
+Java
