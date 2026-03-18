@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null) {
+            return 0;
+        }
+
+        Map<Character, Integer> map = new HashMap<>();
+        int maxLength = 0;
+        int start = 0;
+
+        for (int end = 0; end < s.length(); end++) {
+            char currentChar = s.charAt(end);
+
+            if (map.containsKey(currentChar)) {
+                start = Math.max(map.get(currentChar) + 1, start);
+            }
+
+            map.put(currentChar, end); 
+            maxLength = Math.max(maxLength, end - start + 1);
+        }
+
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.lengthOfLongestSubstring("abcabcbb")); // expected output: 3
+    }
+}
